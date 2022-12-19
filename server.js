@@ -91,7 +91,9 @@ io.on('connection', (socket)=> {
 app.get('/rooms', (req, res)=> {
   res.json(rooms)
 })
-
+app.get('/', (req, res)=> {
+  res.json("connected successfully")
+})
 
 server.listen(PORT, ()=> {
   console.log('listening to port', PORT)
